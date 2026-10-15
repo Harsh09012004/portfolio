@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harsh Sojitra – Unity Game Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6ee;--surface:#fff;--ink:#231d12;--muted:#6b6254;--line:#e6dcc8;--gold:#b8791a;--goldsoft:#f4e3bd;--btn:#231d12;--btnink:#fbf6ee;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15130f;--surface:#1f1c16;--ink:#f6efe0;--muted:#a79d8b;--line:#332f26;--gold:#e5a93a;--goldsoft:#3a2d12;--btn:#e5a93a;--btnink:#15130f}}
+:root[data-theme="dark"]{--bg:#15130f;--surface:#1f1c16;--ink:#f6efe0;--muted:#a79d8b;--line:#332f26;--gold:#e5a93a;--goldsoft:#3a2d12;--btn:#e5a93a;--btnink:#15130f}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "DM Sans",system-ui,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.1;margin:0}
+header.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(44px,9vw,92px);font-weight:800;letter-spacing:-.03em}
+.role{font-size:clamp(18px,3vw,24px);color:var(--gold);font-weight:700;margin:10px 0 18px}
+.lead{max-width:60ch;color:var(--muted);font-size:18px}
+.stats{display:flex;flex-wrap:wrap;gap:28px;margin:30px 0 26px}
+.stat b{display:block;font:800 40px/1 "Bricolage Grotesque",sans-serif;color:var(--gold)}
+.stat span{font-size:14px;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:999px;background:var(--btn);color:var(--btnink);font-weight:700;text-decoration:none;font-size:15px;border:2px solid var(--btn)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn:focus-visible,.chip:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+section{padding:48px 0}
+h2{font-size:clamp(28px,5vw,40px);font-weight:800;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 24px;max-width:60ch}
+.feat{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.fcard{display:flex;gap:16px;padding:18px;background:var(--surface);border:2px solid var(--gold);border-radius:18px;text-decoration:none;color:inherit}
+.fcard h3{font-size:22px}
+.fcard p{margin:6px 0 10px;color:var(--muted);font-size:15px}
+.fcard .go{font-weight:700;color:var(--gold);font-size:15px}
+.tile{flex:none;width:72px;height:72px;border-radius:18px;display:grid;place-items:center;color:#fff;font:800 24px "Bricolage Grotesque",sans-serif;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 15px "DM Sans",sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--btn);color:var(--btnink);border-color:var(--btn)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{display:flex;flex-direction:column;gap:12px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:inherit;transition:border-color .15s}
+.card:hover{border-color:var(--gold)}
+.card .tile{width:56px;height:56px;border-radius:14px;font-size:19px}
+.card h3{font-size:17px;line-height:1.25}
+.card small{color:var(--muted);font-size:13px}
+.card .play{margin-top:auto;font-weight:700;font-size:14px;color:var(--gold)}
+.hidden{display:none}
+.two{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.tag{display:inline-block;margin:0 8px 8px 0;padding:6px 12px;border-radius:8px;background:var(--goldsoft);font-size:14px;font-weight:500}
+.job{margin-bottom:22px}
+.job h3{font-size:20px}.job em{font-style:normal;color:var(--gold);font-size:14px;font-weight:700}
+.job ul{margin:8px 0 0;padding-left:20px;color:var(--muted)}
+footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted)}
+footer a{color:var(--ink);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<h1>Harsh Sojitra</h1>
+<p class="role">Unity Game Developer · Surat, India</p>
+<p class="lead">I build and publish polished mobile games: gameplay, UI/UX, ad monetization and Android/iOS builds. 3+ years in Unity, 20+ games live on Google Play.</p>
+<div class="stats">
+<div class="stat"><b>20+</b><span>games published</span></div>
+<div class="stat"><b>3+</b><span>years in Unity</span></div>
+<div class="stat"><b>4</b><span>ad networks integrated</span></div>
+</div>
+<div class="cta"><a class="btn" href="#games">See my games</a><a class="btn ghost" href="mailto:harshsojitra902@gmail.com">Email me</a></div>
+</div></header>
+
+<main>
+<section id="featured"><div class="wrap">
+<h2>Featured projects</h2>
+<p class="sub">The two projects where I owned the most work.</p>
+<div class="feat" id="feat"></div>
+</div></section>
+
+<section id="games"><div class="wrap">
+<h2>All published games</h2>
+<p class="sub">Tap any game to open it on Google Play.</p>
+<div class="filters" id="filters" role="group" aria-label="Filter games by genre"></div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section id="about"><div class="wrap two">
+<div>
+<h2>Experience</h2>
+<div class="job"><h3>Unity Developer / Team Leader</h3><em>Maxima Gaming Studio, Surat · Jan 2023 – Present</em>
+<ul><li>Improved UI/UX and core gameplay across multiple live projects.</li><li>Integrated and optimized AdMob, Unity Ads, AppLovin MAX and IronSource.</li><li>Resolved complex build, plugin and dependency issues for Android/iOS.</li><li>Mentored junior developers on scripts, debugging and best practices.</li></ul></div>
+<div class="job"><h3>Unity Developer (Internship)</h3><em>AAC Studio LLP, Surat · Oct 2022 – Dec 2022</em>
+<ul><li>Built character movement and a bike-assembly collection game.</li></ul></div>
+</div>
+<div>
+<h2>Skills</h2>
+<p class="sub">What I use day to day.</p>
+<span class="tag">Unity 2D / 3D</span><span class="tag">C# gameplay</span><span class="tag">UI/UX</span><span class="tag">AdMob</span><span class="tag">Unity Ads</span><span class="tag">AppLovin MAX</span><span class="tag">IronSource</span><span class="tag">Firebase</span><span class="tag">Crashlytics</span><span class="tag">A/B testing</span><span class="tag">Android / iOS builds</span><span class="tag">Debugging</span><span class="tag">Team lead</span>
+<p style="margin-top:20px;color:var(--muted)"><b style="color:var(--ink)">Education:</b> BCA, Parul University (2025 – 2028, expected)</p>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<h2 style="font-size:28px">Let's work together</h2>
+<p><a href="mailto:harshsojitra902@gmail.com">harshsojitra902@gmail.com</a> · <a href="tel:+917984607810">+91 7984607810</a></p>
+</div></footer>
+
+<script>
+const B="https://play.google.com/store/apps/details?id=";
+const G=[
+["Shotgun Sounds Gun Simulator","com.gun.simulator.sound","Simulator","Main gameplay and features, UI revamp, full monetization setup.",1],
+["Math Wise: Brain Number Game","mathgames.crossword.mathpuzzles.logic.number.challenge","Puzzle","Core game logic, UI/UX, ads integration and publishing.",1],
+["Chess Master – Board Game","com.minirog.chess.chessmaster","Board"],
+["Nine Men's Morris: Mills Game","com.masterboardgame.mills","Board"],
+["Draw One Part","com.drawline.missingonepart","Puzzle"],
+["Hero Blast: Match 3 Puzzle","com.blast.adventure","Puzzle"],
+["Pup Tile Journey","com.sp.dogggo","Puzzle"],
+["Candy Pop Mania: Match 3 Fun","com.matchtile.match3.tilegame.puzzle","Puzzle"],
+["Dot Connect Puzzle: One Line","com.dotconnect.puzzle","Puzzle"],
+["Colorful Block Puzzle Game","com.colorfulblock.puzzlegame","Puzzle"],
+["Hexa Block Puzzle Game","com.hexablock.colorpuzzle","Puzzle"],
+["Block Puzzle – Win Master","com.blockpuzzle.win.master.real","Puzzle"],
+["Ball Sort Puzzle – Color Sort","com.ball.sort.puzzle.color.bubble.sorting","Puzzle"],
+["Ball Sort Mania: Color Puzzle","water.sort.puzzle.liquidsort.color.sort","Puzzle"],
+["Screw Puzzle: Nuts & Bolts","com.wood.nuts.and.bolts.screw.puzzle.game","Puzzle"],
+["Match 3D Master Puzzle","com.match3d.master.puzzle","Puzzle"],
+["Bus Away – Clear Traffic","com.ryan.bus.away.traffic.out","Casual"],
+["Bus Jam: Traffic Escape","com.minirog.busjam.trafficescape","Casual"],
+["Car vs Cops: Escape Run","com.carvscops.runescape","Casual"],
+["Trading Fidget Toys – 3D Pop It","com.fidgettrading.popit.game","Casual"]
+];
+const pal=[["#e0701f","#b8431b"],["#2f7fd1","#2a4fb0"],["#2f9e6b","#1c7a52"],["#c0449a","#8a2f8a"],["#d4a017","#b06a10"],["#5a55d6","#3b34a8"],["#d1453b","#a82a3a"]];
+const ini=n=>n.replace(/[^A-Za-z0-9 ]/g,"").split(" ").filter(Boolean).slice(0,2).map(w=>w[0]).join("").toUpperCase();
+const tile=(n,i)=>`<div class="tile" style="background:linear-gradient(135deg,${pal[i%7][0]},${pal[i%7][1]})" aria-hidden="true">${ini(n)}</div>`;
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+document.getElementById("feat").innerHTML=G.filter(g=>g[4]).map((g,i)=>`<a class="fcard" href="${B+g[1]}" target="_blank" rel="noopener">${tile(g[0],i)}<div><h3>${esc(g[0])}</h3><p>${g[3]}</p><span class="go">Open on Google Play</span></div></a>`).join("");
+const cats=["All",...new Set(G.map(g=>g[2]))];
+const fl=document.getElementById("filters"),grid=document.getElementById("grid");
+function render(c){
+ grid.innerHTML=G.map((g,i)=>[g,i]).filter(([g])=>c==="All"||g[2]===c).map(([g,i])=>`<a class="card" href="${B+g[1]}" target="_blank" rel="noopener">${tile(g[0],i)}<div><h3>${esc(g[0])}</h3><small>${g[2]}</small></div><span class="play">Play on Google Play</span></a>`).join("");
+ fl.innerHTML=cats.map(x=>`<button class="chip" aria-pressed="${x===c}" data-c="${x}">${x}${x==="All"?" ("+G.length+")":""}</button>`).join("");
+}
+fl.addEventListener("click",e=>{const b=e.target.closest("button");if(b)render(b.dataset.c)});
+render("All");
+</script>
+</body>
+</html>
